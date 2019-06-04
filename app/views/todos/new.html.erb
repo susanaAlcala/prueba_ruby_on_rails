@@ -1,5 +1,7 @@
 <%= form_with(model: @todo, local: true) do |f| %>
-    <h1>Ingrese una descripcion</h1>
+    <h3 class= text-center>CREAR NUEVA TAREA</h3>
+    <br>
+    <h3>Ingrese una descripcion</h3>
     <br>
     <div class= 'form-group'>
         <%= f.label 'Descripción' %>
@@ -13,5 +15,5 @@
     <div class= 'form-group'>
         <%= f.submit 'Crear' %>
     </div>
-
+<br>
 <% end %>
