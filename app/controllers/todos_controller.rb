@@ -26,6 +26,17 @@ def update
     redirect_to todos_path
 end
 
+def destroy
+    @todo.destroy
+    redirect_to todos_path
+end
+
+def complete
+    @todo.completed = true 
+    @todo.save
+    redirect_to todos_path
+
+end
 
 private 
 def todo_params
