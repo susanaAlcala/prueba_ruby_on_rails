@@ -1,6 +1,14 @@
-<%= @todo.description%>
-<% if @todo.completed == true %>
-    <p> Completado </p>
-    <% else %>
-    <p> No completado </p>
-<% end %>
+<br>
+<div class="card card-body bg-light">
+
+    <%= @todo.description%>
+    <% if @todo.completed == true %>
+        <p> Completado </p>
+        <% else %>
+        <p> No completado </p>
+    <% end %>
+
+</div>
+<br>
+    <%= link_to  "Regresar", todos_path, class: 'btn btn-primary'  %>
+

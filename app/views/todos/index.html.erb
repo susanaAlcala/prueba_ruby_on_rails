@@ -1,14 +1,18 @@
-<h3 class= text-center >INDEX</h3>
+<br>
+<h1 class= text-center >INDEX</h1>
+<br>
 
 <% @todos.each do |todo| %>
     <div class="card card-body bg-light">
-        <%= todo.description%>
+        <p> Descripción: <%= todo.description%></p>
         <% todo.completed%>
-        <%= link_to  "Mostrar", todo %>
-        <%= link_to  "Editar", edit_todo_path(todo) %>
-        <%= link_to  "Borrar", todo, method: :delete %>
-        <%= link_to  "Completar", complete_todo_path(todo), method: :completed%>
-
+    
+        <div>
+            <%= link_to  "Mostrar", todo, class: 'btn btn-primary'  %>
+            <%= link_to  "Editar", edit_todo_path(todo), class: 'btn btn-success' %>
+            <%= link_to  "Borrar", todo, method: :delete, class: 'btn btn-warning' %>
+            <%= link_to  "Completar", complete_todo_path(todo), method: :completed, class: 'btn btn-info'%>
+        </div>
     </div>
     <br>
 <% end %>

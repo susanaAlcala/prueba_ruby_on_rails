@@ -1,8 +1,13 @@
+<br>
+<div class="card card-body bg-light">
+
 <%= form_with(model: @todo, local: true) do |f| %>
-    <h1>Ingrese una descripcion</h1>
+    <h3 class= text-center> EDITAR TAREA</h3>
+    <br>
+    <h4>Ingrese cambios a su tarea</h4>
     <br>
     <div class= 'form-group'>
-        <%= f.label 'Descripción' %>
+        <%= f.label 'Descripción: ' %>
         <%= f.text_field :description %>
     </div>
     
@@ -11,7 +16,12 @@
     </div>
     
     <div class= 'form-group'>
-        <%= f.submit 'Crear' %>
+        <%= f.submit 'Guardar cambios' %>
     </div>
 
 <% end %>
+
+</div>
+<br>
+
+<%= link_to  "Regresar", todos_path, class: 'btn btn-primary'  %>

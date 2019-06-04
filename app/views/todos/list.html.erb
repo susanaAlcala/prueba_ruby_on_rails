@@ -1,13 +1,17 @@
+<br>
 <h1 class= text-center >LISTA DE TAREAS</h1>
 <br>
 
 <div class= 'row'>
     <div class = 'col-sm-6'>
-        <h4 class= text-center> NO COMPLETADAS </h4>
+        <div class="card text-white card-body bg-dark">
+            <h4 class= text-center> NO COMPLETADAS </h4>
+        </div>
+            <br>
         <% @todos.each do |todo| %>
             <% if !todo.completed %>
                 <div class="card card-body bg-light">
-                    <%= todo.description%>
+                    <p> Descripción: <%= todo.description%></p>
                     <% todo.completed%>
                 </div>
                 <br>
@@ -16,11 +20,14 @@
     </div>
 
     <div class = 'col-sm-6'>
-        <h4 class= text-center> COMPLETADAS </h4>
+        <div class="card text-white card-body bg-dark">
+            <h4 class= text-center> COMPLETADAS </h4>
+        </div>
+            <br>
             <% @todos.each do |todo| %>
             <% if todo.completed %>
                 <div class="card card-body bg-light">
-                    <%= todo.description%>
+                    <p> Descripción: <%= todo.description%>
                     <% todo.completed%>
                 </div>
                 <br>
