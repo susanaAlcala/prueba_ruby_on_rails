@@ -18,6 +18,14 @@ end
 def show
 end
 
+def edit
+end
+
+def update
+    @todo.update(todo_params)
+    redirect_to todos_path
+end
+
 
 private 
 def todo_params
