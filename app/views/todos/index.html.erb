@@ -1,0 +1,10 @@
+<% @todos.each do |todo| %>
+    <div class="card card-body bg-light">
+        <%= todo.description%>
+        <%= todo.completed%>
+        <%= link_to  "Mostrar", todo %>
+    </div>
+    <br>
+<% end %>
+
+<%= link_to  "Crear", todos_new_path %>
