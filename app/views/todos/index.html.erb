@@ -7,7 +7,7 @@
         <%= link_to  "Mostrar", todo %>
         <%= link_to  "Editar", edit_todo_path(todo) %>
         <%= link_to  "Borrar", todo, method: :delete %>
-        <%= link_to  "Completar", complete_todo_path(todo) %>
+        <%= link_to  "Completar", complete_todo_path(todo), method: :completed%>
 
     </div>
     <br>
